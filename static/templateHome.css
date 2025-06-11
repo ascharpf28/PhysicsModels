@@ -1,0 +1,54 @@
+.containers {
+    display: grid;
+    grid-template-areas:
+        "flag flag flag"
+        "title title title"
+        "nav nav nav" 
+        ;
+    grid-template-columns: 1fr 1fr 1fr ;  
+    grid-template-rows: auto auto auto;  
+}
+
+.title{
+    text-align: center;
+    position: absolute;
+    padding: 20px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -160%); 
+    color: #FFFFFF; 
+    font-size: 60px; 
+}
+
+.flag{
+    margin: 0px;
+    padding: 0px; 
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+    position: relative; 
+}
+
+.nav {
+    grid-area: nav;
+    /*color source: https://www.cmu.edu/brand/brand-guidelines/visual-identity/colors.html*/
+    background-color: #C41230;
+    padding: 20px 0px; 
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    text-align:center;
+}
+
+.nav a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.nav a:hover {
+    background-color: #FFFFFF;
+    color: black;
+}

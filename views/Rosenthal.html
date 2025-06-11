@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alexandra Scharpf">
+    <meta name="keywords" content="Carnegie Mellon University SURA Project">
+    <meta name="description" content="SURA Physics GUIs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title id="title">Rosenthal Model</title>
+    <link rel="stylesheet" href="../static/templateModels.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <script defer src="../static/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <h1 class="title">Rosenthal Model</h1>
+    <div class="containers">
+        <nav class="nav">  
+            <div>
+                <a href="../index.html" class="active">Home</a> 
+                <a href="Gaussian.html" class="active">Gaussian Model</a> 
+            </div>
+        </nav>
+        <div class="sections"> 
+            <h4>Plot Scale</h4>
+            <label>Domain (m): <input type="text" id="domain"></label>
+            <label>Range (m): <input type="text" id="range"></label>
+            <h4>Parameters</h4>
+            <label>Preheat Temperature (K): <input type="text" id="preheatTemp"></label>
+            <label>Apparent Power (W): <input type="text" id="apparentP"></label>
+            <label>Velocity (m/s): <input type="text" id="velocity"></label>
+            <h4>Materials</h4>
+            <div id="materials">
+                <input type="checkbox" id="316L" name="316LCheckBox">
+                <label for="316L"> 316L</label>
+                <input type="checkbox" id="Ti-GAl-4V" name="Ti-GAl-4VCheckBox">
+                <label for="Ti-GAl-4V"> Ti-GAl-4V</label>
+                <input type="checkbox" id="In718" name="In 718CheckBox">
+                <label for="In718"> In 718</label>
+                <input type="checkbox" id="AllOSiMg" name="AllOSiMgCheckBox">
+                <label for="AllOSiMg"> AllOSiMg</label>
+            </div>
+            <label>Thermal Conductivity (W/(m*K)) <input type="text" id="thermalCond"></label>
+            <label>Density (kg/m<sup>3</sup>) <input type="text" id="density"></label>
+            <label>Specific Heat (J/(kg*K)) <input type="text" id="specHeat"></label>
+            <label>T<sub>melting</sub> (K) <input type="text" id="tMelt"></label>
+            <h4>Measurements</h4>
+            <label>Melt Pool Depth (m) <input type="text" id="meltDepth"></label>
+            <label>Melt Pool Width (m)<input type="text" id="meltWidth"></label>
+            <button type="button" onclick="getVars(), drawGraph()">Submit</button>
+        </div> 
+        <div class="model">
+            <!--<h4>Model Will Go On This Side</h4>-->
+            <canvas id="graph" width="600" height="400"></canvas>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+label {
+    display: block;
+    font-size: 20px; 
+    text-align: left;
+    padding: 10px; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#materials{
+    display: flex; 
+}

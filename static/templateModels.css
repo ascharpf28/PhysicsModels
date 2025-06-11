@@ -1,0 +1,64 @@
+.containers {
+    display: grid;
+    grid-template-areas:
+        "title title title title title"
+        "nav nav nav nav nav" 
+        "model model model sections sections"
+        "model model model sections sections"
+        "model model model sections sections"
+        ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
+    grid-template-rows: auto auto auto auto auto;  
+    gap: 20px;  
+    padding: 20px;
+}
+
+.title{
+    grid-area: title;
+    text-align: center;
+    padding: 10px 10px 0px 10px; 
+    color: #000000; 
+    font-size: 60px; 
+}
+
+.sections{
+    grid-area: sections;
+    text-align: left;
+    padding: 10px; 
+    color: #000000; 
+    background-color: #FFFFFF;
+    font-size: 20px; 
+}
+
+.model{
+    grid-area: model;
+    text-align: left;
+    padding: 10px; 
+    color: #000000; 
+    background-color: #FFFFFF;
+    font-size: 20px; 
+}
+
+.nav {
+    grid-area: nav;
+    /*color source: https://www.cmu.edu/brand/brand-guidelines/visual-identity/colors.html*/
+    background-color: #C41230;
+    padding: 20px; 
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    text-align:center;
+}
+
+.nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /*display: block;*/
+}
+  
+.nav a:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
